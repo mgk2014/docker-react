@@ -7,18 +7,12 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save reloaded.
+          Edit <code>src/App.js</code> and save really reloading.
         </p>
-        <p>hi really no more</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learning React
-        </a>
       </header>
+      <p className="App-intro">
+        I was changed on the Feature branch
+      </p>
     </div>
   );
 }
