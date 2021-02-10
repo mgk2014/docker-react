@@ -81,3 +81,19 @@ https://facebook.github.io/create-react-app/docs/running-tests#linux-macos-bash
 and environment variables in Docker here:
 
 https://docs.docker.com/engine/reference/run/#env-environment-variables
+
+**********************************
+Travis Keys Update
+
+In the upcoming lecture, we will be adding our AWS variables to the deploy script of the .travis.yml file. There is a slight change that will be required, otherwise, you will get an error when Travis attempts to run your code.
+
+The code will now look like this:
+
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+
+instead of
+
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: 
+        secure: "AWS_SECRET_KEY"
