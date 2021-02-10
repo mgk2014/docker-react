@@ -56,3 +56,28 @@ Do this:
      
     FROM nginx
     COPY --from=0 /app/build /usr/share/nginx/html
+
+Required Travis Updates
+
+In the upcoming lecture, we will be adding a script to our .travis.yml file. Due to a change in how the Jest library works with Create React App, we need to make a small modification:
+
+    script:
+      - docker run USERNAME/docker-react npm run test -- --coverage
+     
+
+instead should be:
+
+    script:
+      - docker run -e CI=true USERNAME/docker-react npm run test -- --coverage
+
+Additionally, you may want to set the following property to the top of your .travis.yml file:
+
+    language: generic 
+
+You can read up on the CI=true variable here:
+
+https://facebook.github.io/create-react-app/docs/running-tests#linux-macos-bash
+
+and environment variables in Docker here:
+
+https://docs.docker.com/engine/reference/run/#env-environment-variables
