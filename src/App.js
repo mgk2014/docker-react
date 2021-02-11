@@ -7,11 +7,11 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save really reloading.
+          Edit <code>src/App.js</code> and save really reloading mgk.
         </p>
       </header>
       <p className="App-intro">
-        I was changed on the Feature branch
+      learn react
       </p>
     </div>
   );
